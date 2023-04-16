@@ -10,7 +10,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $data = htmlspecialchars($data);
         return $data;
     }
-
     $username = validate($_POST['username']);
     $password = validate($_POST['password']);
 
@@ -44,5 +43,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 } else {
     header("Location: Login.html");
     exit();
+
+
+    
 }
 ?>

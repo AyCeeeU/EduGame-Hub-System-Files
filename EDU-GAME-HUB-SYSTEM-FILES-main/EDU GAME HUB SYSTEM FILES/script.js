@@ -1,43 +1,38 @@
-$(document).ready(function(){
-    console.log('jQuery is working!');
+$(document).ready(function() {
+    $('#add-student-btn').click(function() {
+      $('#add-student-modal').modal('show');
+    });
   });
 
 // Get the modal and the button that opens it
 var modal = document.querySelector('.modal');
-var addButton = document.querySelector('.add-user');
+var addStudentButton = document.querySelector('.add-student');
+var addTeacherButton = document.querySelector('.add-teacher');
 
-// When the user clicks the button, display the modal
-addButton.addEventListener('click', function() {
-    modal.style.display = 'block';
+// When the user clicks the Add Student button, display the student modal
+addStudentButton.addEventListener('click', function() {
+    var studentModal = document.querySelector('#add-student-modal');
+    studentModal.style.display = 'block';
+});
+
+// When the user clicks the Add Teacher button, display the teacher modal
+addTeacherButton.addEventListener('click', function() {
+    var teacherModal = document.querySelector('#add-teacher-modal');
+    teacherModal.style.display = 'block';
 });
 
 // When the user clicks the cancel button or the close button, hide the modal
-var cancelButton = document.querySelector('.cancel');
-var closeButton = document.querySelector('.modal-close');
+var cancelButtons = document.querySelectorAll('.cancel');
+var closeButtons = document.querySelectorAll('.modal-close');
 
-cancelButton.addEventListener('click', closeModal);
-closeButton.addEventListener('click', closeModal);
-
-function closeModal() {
-    modal.style.display = 'none';
+for (var i = 0; i < cancelButtons.length; i++) {
+    cancelButtons[i].addEventListener('click', closeModal);
+    closeButtons[i].addEventListener('click', closeModal);
 }
 
-$(document).ready(function() {
-    $(".teachers-tab").click(function() {
-        $(".students-tab").hide();
-    });
-
-    $("ul li:first-child").click(function() {
-        $(".students-tab").show();
-    });
-
-    // When the user clicks on the "Add Student" button
-$('.add-user').on('click', function() {
-
-    // Display the modal window
-    $('.modal').show();
-  
-  });
-  
-
-});
+function closeModal() {
+    var modals = document.querySelectorAll('.modal');
+    for (var i = 0; i < modals.length; i++) {
+        modals[i].style.display = 'none';
+    }
+}
