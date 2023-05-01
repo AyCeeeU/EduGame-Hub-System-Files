@@ -1,0 +1,11 @@
+.nav-tabs .nav-item .btn-danger {
+    border-color: #dc3545;
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .nav-tabs .nav-item .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    
+  }
