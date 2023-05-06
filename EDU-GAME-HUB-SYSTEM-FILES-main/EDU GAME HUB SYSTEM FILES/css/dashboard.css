@@ -1,3 +1,14 @@
+.logo {
+  width: 300px;
+  height: 190px;
+  cursor: pointer;
+  margin-left: -22px;
+  margin-bottom: -120px;
+}
+
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -160,19 +171,19 @@ body {
 }
 
 .card:first-child {
-  border-left: 7px solid #246dec;
+  border-left: 20px solid #246dec;
 }
 
 .card:nth-child(2) {
-  border-left: 7px solid #f5b74f;
+  border-left: 20px solid #f5b74f;
 }
 
 .card:nth-child(3) {
-  border-left: 7px solid #367952;
+  border-left: 20px solid #367952;
 }
 
 .card:nth-child(4) {
-  border-left: 7px solid #cc3c43;
+  border-left: 20px solid #cc3c43;
 }
 
 .card > span {
@@ -202,12 +213,12 @@ body {
 
 .charts-card {
   background-color: #ffffff;
-  margin-bottom: 20px;
-  padding: 25px;
+  margin-bottom: 30px;
+  padding: 15px;
   box-sizing: border-box;
   -webkit-column-break-inside: avoid;
   border: 1px solid #d2d2d3;
-  border-radius: 5px;
+  border-radius: 1px;
   box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
 

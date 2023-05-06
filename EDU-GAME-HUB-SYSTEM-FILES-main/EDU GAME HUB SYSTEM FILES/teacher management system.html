@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Teacher Dashboard</title>
 
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -27,45 +27,47 @@
         </div>
         <div class="header-right">
           <span class="material-icons-outlined">notifications</span>
-          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">email</span> <button> <link rel="stylesheet" href="css/Messages.css">
           <span class="material-icons-outlined">account_circle</span>
         </div>
       </header>
       <!-- End Header -->
 
-      <!-- Sidebar -->
+     <!-- Sidebar -->
+      
       <aside id="sidebar">
+        <img class="logo" src="images/edugamelogo.png" alt="logo">
         <div class="sidebar-title">
           <div class="sidebar-brand">
             
-            <span class="material-icons-outlined">edugamelogo</span> EduGameHub 
+            
           </div>
           <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
         </div>
 
         <ul class="sidebar-list">
           <li class="sidebar-list-item">
-            <a href="teacher management system.html" target="_blank">
-              <span class="material-icons-outlined">dashboard</span> Dashboard
-            </a>
+              <a href="teacher management system.html">
+                <span class="material-icons-outlined" >dashboard</span> Dashboard
+              </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#" target="_blank">
+            <a href="students.html">
               <span class="material-icons-outlined">groups</span> Students
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="subjects.html" target="_blank">
+            <a href="subjects.html">
               <span class="material-icons-outlined">menu_book</span> Subjects
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#" target="_blank">
+            <a href="Messages.html">
               <span class="material-icons-outlined">mail</span> Messages
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#" target="_blank">
+            <a href="Login.html">
               <span class="material-icons-outlined">logout</span> Sign Out
             </a>
           </li>
@@ -74,6 +76,7 @@
           
       </aside>
       <!-- End Sidebar -->
+
 
       <!-- Main -->
       <main class="main-container">

@@ -1,3 +1,15 @@
+
+.logo {
+  width: 300px;
+  height: 190px;
+  cursor: pointer;
+  margin-left: -22px;
+  margin-bottom: -120px;
+}
+
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -118,15 +130,9 @@ body {
 .sidebar-responsive {
   display: inline !important;
   position: absolute;
-  /*
-    the z-index of the ApexCharts is 11
-    we want the z-index of the sidebar higher so that
-    the charts are not showing over the sidebar 
-    on small screens
-  */
+  
   z-index: 12 !important;
 }
-
 
 /* ---------- MAIN ---------- */
 
