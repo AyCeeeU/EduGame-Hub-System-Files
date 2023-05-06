@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Teacher Dashboard</title>
+    <title>Admin Dashboard</title>
 
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/Messages.css">
   </head>
   <body>
     <div class="grid-container">
@@ -27,13 +27,13 @@
         </div>
         <div class="header-right">
           <span class="material-icons-outlined">notifications</span>
-          <span class="material-icons-outlined">email</span> <button> <link rel="stylesheet" href="css/Messages.css">
+          <span class="material-icons-outlined">email</span>
           <span class="material-icons-outlined">account_circle</span>
         </div>
       </header>
       <!-- End Header -->
 
-     <!-- Sidebar -->
+      <!-- Sidebar -->
       
       <aside id="sidebar">
         <img class="logo" src="images/edugamelogo.png" alt="logo">
@@ -77,63 +77,21 @@
       </aside>
       <!-- End Sidebar -->
 
-
       <!-- Main -->
       <main class="main-container">
         <div class="main-title">
-          <p class="font-weight-bold">DASHBOARD</p>
+          <p class="font-weight-bold">Messages</p>
         </div>
 
-        <div class="main-cards">
-
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">STUDENTS</p>
-              <span class="material-icons-outlined text-blue">groups</span>
+          <!-- Messages -->
+       <body>
+            <div class="comment-box">
+                
+                <form action="#">
+                    
+                    <input tpye="email" name="email" placeholder="Email Address..">
+                    <textarea name="comment" placeholder="Type Your Comment..."></textarea>
+                    <button type="submit">Submit Message</button>
+                </form>
             </div>
-            <span class="text-primary font-weight-bold">41</span>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">SUBJECTS</p>
-              <span class="material-icons-outlined text-orange">menu_book</menu></span>
-            </div>
-            <span class="text-primary font-weight-bold">6</span>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">COMPLETED ACTIVITIES</p>
-              <span class="material-icons-outlined text-green">task</span>
-            </div>
-            <span class="text-primary font-weight-bold">79</span>
-          </div>
-
-          
-
-        </div>
-
-        <div class="charts">
-
-          <div class="charts-card">
-            <p class="chart-title">RECENT ACTIVITIES</p>
-            <span class="text-primary font-weight-bold">79</span>
-            <div id="bar-chart"></div>
-          </div>
-
-          
-
-        </div>
-      </main>
-      <!-- End Main -->
-
-    </div>
-
-    <!-- Scripts -->
-    <!-- ApexCharts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
-  </body>
-</html>
+       </body> 

@@ -29,7 +29,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             if ($row['username'] === $username && $row['password'] === $password) {
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['name'] = $row['name'];
-                header("Location: index.php"); 
+                header("Location: admin.html"); 
                 exit();
             } else {
                 header("Location: Login.html?error=Incorrect username or password");

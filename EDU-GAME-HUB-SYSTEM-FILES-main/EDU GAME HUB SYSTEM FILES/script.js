@@ -1,38 +1,118 @@
-$(document).ready(function() {
-    $('#add-student-btn').click(function() {
-      $('#add-student-modal').modal('show');
-    });
-  });
+// SIDEBAR TOGGLE
 
-// Get the modal and the button that opens it
-var modal = document.querySelector('.modal');
-var addStudentButton = document.querySelector('.add-student');
-var addTeacherButton = document.querySelector('.add-teacher');
+var sidebarOpen = false;
+var sidebar = document.getElementById("sidebar");
 
-// When the user clicks the Add Student button, display the student modal
-addStudentButton.addEventListener('click', function() {
-    var studentModal = document.querySelector('#add-student-modal');
-    studentModal.style.display = 'block';
-});
-
-// When the user clicks the Add Teacher button, display the teacher modal
-addTeacherButton.addEventListener('click', function() {
-    var teacherModal = document.querySelector('#add-teacher-modal');
-    teacherModal.style.display = 'block';
-});
-
-// When the user clicks the cancel button or the close button, hide the modal
-var cancelButtons = document.querySelectorAll('.cancel');
-var closeButtons = document.querySelectorAll('.modal-close');
-
-for (var i = 0; i < cancelButtons.length; i++) {
-    cancelButtons[i].addEventListener('click', closeModal);
-    closeButtons[i].addEventListener('click', closeModal);
+function openSidebar() {
+  if(!sidebarOpen) {
+    sidebar.classList.add("sidebar-responsive");
+    sidebarOpen = true;
+  }
 }
 
-function closeModal() {
-    var modals = document.querySelectorAll('.modal');
-    for (var i = 0; i < modals.length; i++) {
-        modals[i].style.display = 'none';
+function closeSidebar() {
+  if(sidebarOpen) {
+    sidebar.classList.remove("sidebar-responsive");
+    sidebarOpen = false;
+  }
+}
+
+
+
+// ---------- CHARTS ----------
+
+// BAR CHART
+var barChartOptions = {
+  series: [{
+    data: [10, 8, 6, 4, 2]
+  }],
+  chart: {
+    type: 'bar',
+    height: 350,
+    toolbar: {
+      show: false
+    },
+  },
+  colors: [
+    "#246dec",
+    "#cc3c43",
+    "#367952",
+    "#f5b74f",
+    "#4f35a1"
+  ],
+  plotOptions: {
+    bar: {
+      distributed: true,
+      borderRadius: 4,
+      horizontal: false,
+      columnWidth: '40%',
     }
-}
+  },
+  dataLabels: {
+    enabled: false
+  },
+  legend: {
+    show: false
+  },
+  xaxis: {
+    categories: ["Laptop", "Phone", "Monitor", "Headphones", "Camera"],
+  },
+  yaxis: {
+    title: {
+      text: "Count"
+    }
+  }
+};
+
+var barChart = new ApexCharts(document.querySelector("#bar-chart"), barChartOptions);
+barChart.render();
+
+
+// AREA CHART
+var areaChartOptions = {
+  series: [{
+    name: 'Purchase Orders',
+    data: [31, 40, 28, 51, 42, 109, 100]
+  }, {
+    name: 'Sales Orders',
+    data: [11, 32, 45, 32, 34, 52, 41]
+  }],
+  chart: {
+    height: 350,
+    type: 'area',
+    toolbar: {
+      show: false,
+    },
+  },
+  colors: ["#4f35a1", "#246dec"],
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+  markers: {
+    size: 0
+  },
+  yaxis: [
+    {
+      title: {
+        text: 'Purchase Orders',
+      },
+    },
+    {
+      opposite: true,
+      title: {
+        text: 'Sales Orders',
+      },
+    },
+  ],
+  tooltip: {
+    shared: true,
+    intersect: false,
+  }
+};
+
+var areaChart = new ApexCharts(document.querySelector("#area-chart"), areaChartOptions);
+areaChart.render();
